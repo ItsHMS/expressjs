@@ -20,6 +20,9 @@ app.use(morgan("tiny"));
 app.get("/", (req, res) => {
   res.status(200).send({ status: "ok" });
 });
+app.post("/xyz",(req,res)=>{
+  res.status(200).send(req.body)
+})
 
 app.use("/hello", helloRoute);
 
