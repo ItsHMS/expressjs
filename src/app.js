@@ -5,6 +5,7 @@ import axios from "axios";
 
 import * as middleware from "./utils/middleware.js";
 import helloRoute from "./routes/helloRouter.js";
+import userRoute from "./routes/userRouter.js";
 
 const app = express();
 const pendingRequests = {};
@@ -27,6 +28,7 @@ app.post("/xyz",(req,res)=>{
 })
 
 app.use("/hello", helloRoute);
+app.use("/users", userRoute);
 
 
 
