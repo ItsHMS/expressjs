@@ -10,7 +10,7 @@ const app = express();
 const pendingRequests = {};
 
 // parse json request body
-app.use(express.json());
+app.use(express.json()); 
 
 // enable cors
 app.use(cors());
@@ -20,7 +20,7 @@ app.use(morgan("tiny"));
 
 // healthcheck endpoint
 app.get("/", (req, res) => {
-  res.status(200).send({ status: "ok" });
+  res.status(200).send({ status: "ook" });
 });
 app.post("/xyz",(req,res)=>{
   res.status(200).send(req.body)
