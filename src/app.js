@@ -55,7 +55,7 @@ app.post("/generate-image", async (req, res) => {
   const bearerToken = "dajgJq90RXnjPZeQW3-spzNIp4faGYMITe-tRP4PUxK4yYNS";
   const requestBody = {
     prompt: prompt,
-    callback_url: `https://expressjs-production-dde2.up.railway.app?callback_id=${requestId}`, // Adjusted callback URL to include requestId
+    callback_url: `https://expressjs-production-dde2.up.railway.app/webhook-callback?callback_id=${requestId}`, // Adjusted callback URL to include requestId
   };
 
   try {
